@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1569494617 source:c:\users\dinatamas\repositories\project_euler_python\1-99\14\main.cpp
+	"stdio.h"
+	<cstdint>
+	<iostream>
+

@@ -1,0 +1,29 @@
+TODO:
+	- faster way to sum / multiply digits of numbers together, to convert int, str, array
+	- before problem 22: proper file handling (close, check for existence & access?)
+
+Resources:
+	number theoretic & other algorithms on Wikipedia, "Python Cookbook"
+
+for loop vs while loop (vs for each loop):
+	- usually the compiler optimizes enough for you to not care about it
+2D array slicing:
+	- https://stackoverflow.com/a/17277125
+Math implementations: http://www.javascripter.net/math/index.htm
+Quick sqrt, exp, log:
+	- https://stackoverflow.com/questions/39821367/very-fast-approximate-logarithm-natural-log-function-in-c
+Python math module implementation:
+	https://github.com/python/cpython/blob/master/Modules/mathmodule.c
+NumPy module implementation:
+	https://github.com/numpy/numpy
+21.py: for i in range(len(divs)/2, len(divs)) is equivalent to for d in divs[len(divs)/2:]
+	- are references used, so that changes in divs are preserved or not?
+Python lists (performance):
+	- https://wiki.python.org/moin/TimeComplexity
+	- https://stackoverflow.com/a/3958322
+	"I wanted to try and build a sorted list using binary insertion sort (O(log n)), but Python lists are implemented as arrays, therefore insertion can cause re-allocation, which is in average O(n). Therefore, it is faster to build an unsorted list, and use Python's O(n log n) built-in sorting algorithm."
+		https://www.geeksforgeeks.org/binary-insertion-sort/
+Python dictionary implementation:
+	https://www.laurentluce.com/posts/python-dictionary-implementation/
+
+Problems with backtracking: 24, 31
