@@ -1,4 +1,4 @@
-from math import floor, sqrt
+from math import floor, sqrt, log10, ceil
 
 def isprime(n):
     if n == 1:
@@ -16,13 +16,36 @@ def isprime(n):
             return False
     return True
 
-res = 0
-for n in range(4, 9):
-    # create all permutations
-    # no need to check if pandigital
-    # because we only generate pandigitals
-    if isprime(n) and res < n:
-        res = n
+def number_to_array(num):
+    array = [0 for x in range(floor(log10(num))+1)]
+    i = len(array)-1
+    while i >= 0:
+        array[i] = num % 10
+        num = num // 10
+        i -= 1
+    return array
 
-print(res)
+def array_to_number(array):
+    i = 0
+    num = 0
+    while i <= len(array)-1:
+        num = num * 10 + array[i]
+        i += 1
+    return num
 
+def ispalindrome(num, n):
+    return sorted(number_to_array(num)) == [x for x in range(1,n+1)]
+
+def number_of_digits(num):
+    return int(log10(num)) + 1
+
+"""
+for num in range(10**9-1, 1, -2):
+    if ispalindrome(num, number_of_digits(num)) and isprime(num):
+        print(num)
+        break
+"""
+
+# use the sieve of eratosthenes
+# use the special properties of palindrome numbers so that you don't
+    # have to check every number

@@ -104,7 +104,7 @@ def index(n, i):
     return (n % 10 ** (i+1)) // 10 ** i
 
 def ispalindrome(n):
-    length = int(log(n, 10))
+    length = int(log(n, 10)) #wrong: log(1000, 10) is 2.9999999996
     for i in range(length):
         if index(n, i) != index(n, length-i):
             return False

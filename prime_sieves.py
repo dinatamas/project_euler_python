@@ -57,3 +57,7 @@ remove the composites? This will save the last n operations
 of iterating through the array, but the removal will require
 more steps than the random access of array elements.
 """
+
+# linear sieve
+# https://stackoverflow.com/questions/17545888/number-of-distinct-prime-factors-of-a-number/17550147#17550147
+# https://cp-algorithms.com/algebra/prime-sieve-linear.html
